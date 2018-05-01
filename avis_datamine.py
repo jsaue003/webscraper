@@ -23,12 +23,18 @@ for counter in counters:
 
 # print(output2)
 
-rows = zip(output1,output2,output3)
+rows = [output1,output2,output3]
 
-with open('output.csv', 'w', newline='') as csvfile:
-    writer = csv.writer(csvfile)
-    for row in rows:
-         writer.writerow(row)
+# with open('output.csv', 'w', newline='') as csvfile:
+#     writer = csv.writer(csvfile)
+#     writer.writerow(("output1", "output2"))
+#     for row in rows:
+#          writer.writerow(row)
+
+
+with open("output.csv", "w") as f:
+    writer = csv.writer(f)
+    writer.writerows(rows)
 
 
 # for heading in headings:
